@@ -4,6 +4,16 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#preloader {
+  background: #fff url("./img/TNA Loading Animation.gif") no-repeat center
+    center;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
 .nav-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -73,6 +83,10 @@ footer {
 }
 
 @media (min-width: 992px) {
+  #preloader {
+    background-size: 7%;
+  }
+
   .footer .menu {
     margin-bottom: 30px;
   }
@@ -86,15 +100,5 @@ footer {
     font-size: 1em;
     font-weight: 500;
     letter-spacing: 2px;
-  }
-
-  #preloader {
-    background: #fff url("./img/TNA Loading Animation.gif") no-repeat center
-      center;
-    background-size: 10%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
   }
 }
