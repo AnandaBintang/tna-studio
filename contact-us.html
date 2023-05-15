@@ -5,361 +5,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | TNA Studio</title>
+    <title>TNA Studio</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            padding-bottom: 100px;
-        }
-
-        #contact {
-            width: 100%;
-            height: 100%;
-        }
-
-        .section-header {
-            text-align: center;
-            margin: 0 auto;
-            padding: 40px 0;
-            font: 300 60px 'Oswald', sans-serif;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-        }
-
-        .contact-wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            max-width: 840px;
-        }
-
-        /* Left contact page */
-        .form-horizontal {
-            /*float: left;*/
-            max-width: 400px;
-            font-family: 'Lato';
-            font-weight: 400;
-        }
-
-        .form-control,
-        textarea {
-            max-width: 400px;
-            background-color: #000;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-
-        .send-button {
-            margin-top: 15px;
-            height: 34px;
-            width: 400px;
-            overflow: hidden;
-            transition: all .2s ease-in-out;
-        }
-
-        .alt-send-button {
-            width: 400px;
-            height: 34px;
-            transition: all .2s ease-in-out;
-        }
-
-        .send-text {
-            display: block;
-            margin-top: 10px;
-            font: 700 12px 'Lato', sans-serif;
-            letter-spacing: 2px;
-        }
-
-        .alt-send-button:hover {
-            transform: translate3d(0px, -29px, 0px);
-        }
-
-        /* Begin Right Contact Page */
-        .direct-contact-container {
-            max-width: 400px;
-        }
-
-        /* Location, Phone, Email Section */
-        .contact-list {
-            list-style-type: none;
-            margin-left: -30px;
-            padding-right: 20px;
-        }
-
-        .list-item {
-            line-height: 4;
-            color: #aaa;
-        }
-
-        .contact-text {
-            font: 300 18px 'Lato', sans-serif;
-            letter-spacing: 1.9px;
-            color: #bbb;
-        }
-
-        .place {
-            margin-left: 62px;
-        }
-
-        .phone {
-            margin-left: 56px;
-        }
-
-        .gmail {
-            margin-left: 53px;
-        }
-
-        .contact-text a {
-            color: #bbb;
-            text-decoration: none;
-            transition-duration: 0.2s;
-        }
-
-        .contact-text a:hover {
-            color: #fff;
-            text-decoration: none;
-        }
-
-
-        /* Social Media Icons */
-        .social-media-list {
-            position: relative;
-            font-size: 22px;
-            text-align: center;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .social-media-list li a {
-            color: #fff;
-        }
-
-        .social-media-list li {
-            position: relative;
-            display: inline-block;
-            height: 60px;
-            width: 60px;
-            margin: 10px 3px;
-            line-height: 60px;
-            border-radius: 50%;
-            color: #fff;
-            background-color: rgb(27, 27, 27);
-            cursor: pointer;
-            transition: all .2s ease-in-out;
-        }
-
-        .social-media-list li:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            border-radius: 50%;
-            opacity: 0;
-            box-shadow: 0 0 0 1px #fff;
-            transition: all .2s ease-in-out;
-        }
-
-        .social-media-list li:hover {
-            background-color: #fff;
-        }
-
-        .social-media-list li:hover:after {
-            opacity: 1;
-            transform: scale(1.12);
-            transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
-        }
-
-        .social-media-list li:hover a {
-            color: #000;
-        }
-
-        .copyright {
-            font: 200 14px 'Oswald', sans-serif;
-            color: #555;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-
-        hr {
-            border-color: rgba(255, 255, 255, .6);
-        }
-
-        /* Begin Media Queries*/
-        @media screen and (max-width: 850px) {
-            .contact-wrapper {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .direct-contact-container,
-            .form-horizontal {
-                margin: 0 auto;
-            }
-
-            .direct-contact-container {
-                margin-top: 60px;
-                max-width: 300px;
-            }
-
-            .social-media-list li {
-                height: 60px;
-                width: 60px;
-                line-height: 60px;
-            }
-
-            .social-media-list li:after {
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
-            }
-        }
-
-        @media screen and (max-width: 569px) {
-
-            .direct-contact-container,
-            .form-wrapper {
-                float: none;
-                margin: 0 auto;
-            }
-
-            .form-control,
-            textarea {
-
-                margin: 0 auto;
-            }
-
-
-            .name,
-            .email,
-            textarea {
-                width: 280px;
-            }
-
-            .direct-contact-container {
-                margin-top: 60px;
-                max-width: 280px;
-            }
-
-            .social-media-list {
-                left: 0;
-            }
-
-            .social-media-list li {
-                height: 55px;
-                width: 55px;
-                line-height: 55px;
-                font-size: 2rem;
-            }
-
-            .social-media-list li:after {
-                width: 55px;
-                height: 55px;
-                line-height: 55px;
-            }
-
-        }
-
-        @media screen and (max-width: 410px) {
-            .send-button {
-                width: 99%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
-    <section id="contact">
+    <div id="preloader"></div>
 
-        <h1 class="section-header">Contact</h1>
-
-        <div class="contact-wrapper">
-
-            <!-- Left contact page -->
-
-            <form id="contact-form" class="form-horizontal" role="form">
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""
-                            required>
-                    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="./img/logo.png" alt="TNA" width="100" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-auto" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link mx-2 active" href="./">Home</a>
+                    <a class="nav-link mx-2" href="#">Work</a>
+                    <a class="nav-link mx-2" href="#">Original Content</a>
+                    <a class="nav-link mx-2" href="#">About Us</a>
+                    <a class="nav-link mx-2" href="./contact-us.html">Contact</a>
                 </div>
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value=""
-                            required>
-                    </div>
-                </div>
-
-                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                    <div class="alt-send-button">
-                        <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-                    </div>
-
-                </button>
-
-            </form>
-
-            <!-- Left contact page -->
-
-            <div class="direct-contact-container">
-
-                <ul class="contact-list">
-                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City,
-                                State</span></i></li>
-
-                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
-                                    href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
-
-                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
-                                    href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
-
-                </ul>
-
-                <hr>
-                <ul class="social-media-list">
-                    <li><a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-github" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-codepen" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-                <hr>
-
-                <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-
             </div>
-
         </div>
+    </nav>
 
-    </section>
+    <div class="parallax__contact container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h1>Header</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aspernatur fugit iure ut
+                        quis aliquid?</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="d-flex justify-content-center my-3">
+            <h1 class="mt-5">Contact Us</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 m-5 px-5">
+                <div class="mb-3">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="message"></textarea>
+                </div>
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-primary">Send</button>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="address__location">
+                            <ul>
+                                <li>
+                                    <h3><i class="fa-solid fa-location-dot"></i>City, State</h3>
+                                </li>
+                                <li>
+                                    <h3><i class="fa-solid fa-phone"></i>+62 xxx xxx xxx</h3>
+                                </li>
+                                <li>
+                                    <h3><i class="fa-solid fa-envelope"></i>email@mail.com</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12">
+                        <div class="social__media">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></i></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></i></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></i></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <p class="menu">
+                        <a href="#">Home</a>
+                        <a href="#">Work</a>
+                        <a href="#">Original Content</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">
+                        Copyright &copy; 2020 -
+                        <script>document.write(new Date().getFullYear());</script> TNA Studios
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script src="./contact.js"></script>
 </body>
 
 </html>

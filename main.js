@@ -1,13 +1,6 @@
 $(document).ready(function () {
   const mediaQuery = window.matchMedia("(min-width: 1025px)");
 
-  $("body").css("overflowY", "hidden");
-  $("#preloader").css({
-    visibility: "visible",
-    opacity: "1",
-    transition: "opacity 2s linear",
-  });
-
   window.addEventListener("load", () => {
     setTimeout(() => {
       for (let i = 0; i <= 800; i++) {
@@ -20,7 +13,6 @@ $(document).ready(function () {
       }
 
       setTimeout(() => {
-        $("body").css("overflowY", "auto");
         if (!mediaQuery.matches) {
           $(".navbar").addClass("sticky-top");
         }
