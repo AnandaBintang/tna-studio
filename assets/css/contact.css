@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.parallax-section {
+  height: 80vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+.parallax-bg {
+  background-image: url("../../assets/img/IP.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  min-height: 100%;
+}
+
+.parallax-section h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#contact {
+  position: relative;
+  background-color: #fff;
+}
+
+.container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.address__location ul li {
+  display: block;
+  margin: 1rem 1rem;
+}
+
+.address__location ul li h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.address__location ul li i {
+  margin-right: 3rem;
+}
+
+.contact__divider {
+  width: 80%;
+}
+
+.social__media {
+  margin: 0 1rem;
+}
+
+.social__media ul {
+  padding: 0;
+}
+
+.social__media ul li {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  background: #000;
+  border-radius: 100%;
+  margin: 0px 1rem;
+}
+
+.social__media ul li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  transition: 1s;
+}
+
+.social__media ul li a:hover {
+  color: cyan;
+}
+
+@media (min-width: 992px) {
+  .address__location ul li {
+    display: block;
+    margin: 2rem 2rem;
+  }
+
+  .address__location ul li h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  .address__location ul li i {
+    margin-right: 5rem;
+  }
+
+  .social__media {
+    margin: 1rem 1rem;
+  }
+
+  .social__media ul {
+    margin: 0 1rem;
+  }
+
+  .social__media ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #000;
+    border-radius: 100%;
+    margin: 0px 1rem;
+  }
+
+  .social__media ul li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+    transition: 1s;
+  }
+
+  .social__media ul li a:hover {
+    color: cyan;
+  }
+}

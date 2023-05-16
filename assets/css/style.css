@@ -6,8 +6,8 @@ body {
 }
 
 #preloader {
-  background: #fff url("./img/TNA Loading Animation.gif") no-repeat center
-    center;
+  background: #fff url("../../assets/img/TNA Loading Animation.gif") no-repeat
+    center center;
   background-size: 25%;
   height: 100vh;
   width: 100%;
@@ -18,48 +18,6 @@ body {
 .nav-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-}
-
-.parallax-section {
-  min-height: 120vh;
-  padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  position: relative;
-}
-
-.parallax-bg {
-  background-image: url("img/IP.png");
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
-  min-height: 100%;
-}
-
-.parallax-section h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  color: #fff;
-  margin-top: 35rem;
-}
-
-#content {
-  position: relative;
-  background-color: #fff;
-}
-
-#content h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2em;
-  font-weight: 600;
 }
 
 footer {
