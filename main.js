@@ -19,4 +19,9 @@ $(document).ready(function () {
       }, 1300);
     }, 2000);
   });
+
+  $(document).on("scroll", () => {
+    let value = window.scrollY;
+    $("#parallax-bg").css("top", `${value * 0.5}px`);
+  });
 });

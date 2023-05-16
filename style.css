@@ -2,6 +2,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
 #preloader {
@@ -19,29 +20,40 @@ body {
   font-weight: 500;
 }
 
-.jumbotron {
-  background-color: #000;
+.parallax-section {
+  min-height: 120vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+.parallax-bg {
+  background-image: url("img/IP.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background-size: cover;
-  height: 150vh;
-  margin-top: -75px;
-  text-align: center;
-  color: #fff;
+  background-position: center center;
+  z-index: -1;
+  min-height: 100%;
 }
 
-.jumbotron .container h1 {
+.parallax-section h1 {
   font-family: "Montserrat", sans-serif;
-  margin-top: 170px;
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 600;
-  text-align: center;
-  margin-bottom: 30px;
+  color: #fff;
+  margin-top: 35rem;
 }
 
-.jumbotron .container h3 {
-  font-size: 1.5em;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 30px;
+#content {
+  position: relative;
+  background-color: #fff;
 }
 
 #content h2 {
@@ -51,6 +63,7 @@ body {
 }
 
 footer {
+  position: relative;
   padding: 5em 0;
 }
 
