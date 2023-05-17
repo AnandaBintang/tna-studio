@@ -8,7 +8,7 @@
 }
 
 .parallax-bg {
-  background-image: url("../../assets/img/IP.png");
+  background-image: url("../../assets/img/IP-mobile.png");
   position: absolute;
   left: 0;
   top: 0;
@@ -27,18 +27,45 @@
   color: #fff;
 }
 
-#content {
+.parallax-subsection {
+  height: 70vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   position: relative;
-  background-color: #fff;
 }
 
-#content h2 {
+.parallax-subbg {
+  background-image: url("../../assets/img/IP-mobile.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  min-height: 100%;
+}
+
+.parallax-subsection h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
+  .parallax-bg {
+    background-image: url("../../assets/img/IP.png");
+  }
+
+  .parallax-subbg {
+    background-image: url("../../assets/img/IP.png");
+  }
+
   .parallax-section {
     min-height: 120vh;
     padding: 50px;

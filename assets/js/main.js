@@ -3,14 +3,10 @@ $(document).ready(function () {
 
   window.addEventListener("load", () => {
     setTimeout(() => {
-      for (let i = 0; i <= 800; i++) {
-        setTimeout(() => {
-          $("#preloader").css({
-            bottom: `-${i}px`,
-            transition: "bottom 1s",
-          });
-        }, 500);
-      }
+      $("#preloader").css({
+        top: `1000px`,
+        transition: "top 1s",
+      });
 
       setTimeout(() => {
         if (!mediaQuery.matches) {
