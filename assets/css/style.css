@@ -6,6 +6,7 @@ body {
 }
 
 #preloader {
+  color-scheme: only light;
   background: #fff url("../../assets/img/TNA Loading Animation.gif") no-repeat
     center center;
   background-size: 25%;
@@ -23,6 +24,7 @@ body {
 
 .page__content {
   position: relative;
+  width: 100%;
   background-color: #ffffff;
 }
 

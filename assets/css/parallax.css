@@ -62,6 +62,7 @@
 
   .parallax-subbg {
     background-image: url("../../assets/img/IP.png");
+    background-position: top center;
   }
 
   .parallax-subsection h1 {
