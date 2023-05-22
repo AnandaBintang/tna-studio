@@ -32,11 +32,17 @@ body {
   border-radius: 0;
 }
 
+.sub__lightbox {
+  text-decoration: none;
+}
+
 .sub-title {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 2px;
+  color: #000;
+  text-decoration: none;
 }
 
 .form-control {
