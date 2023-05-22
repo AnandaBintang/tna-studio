@@ -140,6 +140,29 @@
 
 @media only screen and (min-width: 992px) {
   .title__about {
+    font-size: 3rem;
+  }
+  .title__about::after {
+    width: 25%;
+    margin-top: -0.3rem;
+  }
+  .content__1::after {
+    content: "\a";
+    white-space: pre;
+  }
+  .content__about {
+    font-size: 1rem;
+  }
+  .our-team {
+    margin-bottom: 30px;
+  }
+  .our-team .team_img img {
+    height: 16rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .title__about {
     font-size: 3.4rem;
   }
   .title__about::after {
