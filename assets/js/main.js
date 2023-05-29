@@ -4,7 +4,7 @@ $(document).ready(function () {
   window.addEventListener("load", () => {
     setTimeout(() => {
       $("#preloader").css({
-        top: `1000px`,
+        top: `100%`,
         transition: "top 1s",
       });
 
@@ -19,5 +19,11 @@ $(document).ready(function () {
   $(document).on("scroll", () => {
     let value = window.scrollY;
     $("#parallax-bg").css("top", `${value * 0.5}px`);
+  });
+
+  $(function () {
+    $(".card-img-top").imgHover({
+      grow: false,
+    });
   });
 });
